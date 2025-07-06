@@ -54,19 +54,19 @@ app.post("/login", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-    socket.on("joinRoom", ({ username, room }) => {
-        socket.join(room);
+  socket.on("joinRoom", ({ username, room }) => {
+    socket.join(room);
 
-        if (!messageHistory[room]) {
-            messageHistory[room] = [];
-        }
+    if (!messageHistory[room]) {
+      messageHistory[room] = [];
+    }
 
-        socket.emit("messageHistory", messageHistory[room]);
+    socket.emit("messageHistory", messageHistory[room]);
 
-        socket.to(room).emit("message", `${username} joined ${room}`);
-    });
+    socket.to(room).emit("message", `${username} joined ${room}`);
+  });
 
-    socket.on("chatMessage", ({ username, text }) => {
+  socket.on("chatMessage", ({ username, text }) => {
     const rooms = Array.from(socket.rooms).filter(r => r !== socket.id);
     rooms.forEach(room => {
       const message = `${username}: ${text}`;
@@ -74,9 +74,7 @@ io.on("connection", (socket) => {
       socket.to(room).emit("message", message);
       socket.emit("message", message);
     });
-});
-});
-    });
+  });
 });
 
 const PORT = process.env.PORT || 3000;
