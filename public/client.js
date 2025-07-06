@@ -6,6 +6,9 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
   if (input.value) {
     socket.emit("chatMessage", input.value);
+    const item = document.createElement("li");
+    item.textContent = input.value;
+    messages.appendChild(item);
     input.value = "";
   }
 });
