@@ -1,16 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Chat</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-  <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark Mode</button>
+<body class="gradient-bg">
+  <div class="chat-header">
+    <button class="toggle-theme" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+    <a href="/logout" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
   <div class="chat-container">
     <h2 id="room-name"></h2>
     <ul id="messages"></ul>
     <form id="form">
-      <input id="input" autocomplete="off" placeholder="Type your message" /><button>Send</button>
+      <input id="input" autocomplete="off" placeholder="Type your message" /><button><i class="fas fa-paper-plane"></i></button>
     </form>
   </div>
 
@@ -23,6 +28,14 @@
     document.getElementById('room-name').textContent = "Room: " + room;
 
     socket.emit("joinRoom", { username, room });
+
+    socket.on("messageHistory", (messages) => {
+      messages.forEach(msg => {
+        const item = document.createElement("li");
+        item.textContent = msg;
+        document.getElementById("messages").appendChild(item);
+      });
+    });
   </script>
   <script src="client.js"></script>
   <script>
