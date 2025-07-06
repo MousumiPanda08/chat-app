@@ -84,3 +84,5 @@ This chat app proves that simple yet powerful real-time applications can be buil
 
 #OUTPUT
 
+<img width="1909" height="967" alt="Image" src="https://github.com/user-attachments/assets/2eacabdf-1717-4126-941f-ab3de931e412" />
+
