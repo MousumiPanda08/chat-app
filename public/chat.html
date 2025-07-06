@@ -22,8 +22,8 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
-    const username = prompt("Enter your username again to join chat:");
-    const room = prompt("Enter room name:");
+    const username = prompt("Enter your username again to join chat:") || "Anonymous";
+    const room = prompt("Enter room name:") || "General";
 
     document.getElementById('room-name').textContent = "Room: " + room;
 
