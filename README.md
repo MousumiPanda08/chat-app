@@ -86,3 +86,8 @@ This chat app proves that simple yet powerful real-time applications can be buil
 
 <img width="1909" height="967" alt="Image" src="https://github.com/user-attachments/assets/2eacabdf-1717-4126-941f-ab3de931e412" />
 
+<img width="1898" height="907" alt="Image" src="https://github.com/user-attachments/assets/96d472f0-c242-483a-9d6f-80e8a84553f8" />
+
+#live project link
+
+https://chat-app-xp3z.onrender.com
