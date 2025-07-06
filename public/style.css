@@ -1,115 +1,33 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-  margin: 0;
-  padding: 0;
-  transition: background 0.5s, color 0.5s;
+  font-family: sans-serif;
+  background-color: white;
+  color: black;
 }
 
-body.dark {
-  background: linear-gradient(135deg, #1c1c1c 0%, #3a3a3a 100%);
-  color: #f1f1f1;
+.dark {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .chat-container {
-  max-width: 700px;
-  margin: 60px auto;
-  background: #ffffffcc;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-}
-
-body.dark .chat-container {
-  background: #2c2c2ccc;
-}
-
-#room-name {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: inherit;
+  width: 400px;
+  margin: 50px auto;
 }
 
 #messages {
   list-style-type: none;
   padding: 0;
-  height: 300px;
+  max-height: 300px;
   overflow-y: auto;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fefefe;
-  margin-bottom: 15px;
-  color: #333;
+  margin-bottom: 10px;
 }
 
-body.dark #messages {
-  background: #444;
-  color: #f1f1f1;
-}
-
-#messages li {
-  padding: 10px 12px;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: center;
-}
-
-#messages li .icon {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-form {
-  display: flex;
-  gap: 10px;
-}
-
-#input {
-  flex: 1;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  outline: none;
-  background-color: white;
-}
-
-body.dark #input {
-  background-color: #333;
-  color: white;
-  border: 1px solid #888;
+input {
+  width: 75%;
+  padding: 10px;
 }
 
 button {
-  padding: 12px 20px;
-  background: linear-gradient(to right, #43cea2, #185a9d);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: linear-gradient(to right, #11998e, #38ef7d);
-}
-
-.toggle-theme {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  background: #333;
-  color: white;
-  cursor: pointer;
-}
-
-body.dark .toggle-theme {
-  background: #f1f1f1;
-  color: #333;
+  padding: 10px;
 }
