@@ -67,13 +67,14 @@ io.on("connection", (socket) => {
     });
 
     socket.on("chatMessage", ({ username, text }) => {
-  const rooms = Array.from(socket.rooms).filter(r => r !== socket.id);
-  rooms.forEach(room => {
-    const message = `${username}: ${text}`;
-    messageHistory[room].push(message);
-    socket.to(room).emit("message", message);
-    socket.emit("message", message);
-  });
+    const rooms = Array.from(socket.rooms).filter(r => r !== socket.id);
+    rooms.forEach(room => {
+      const message = `${username}: ${text}`;
+      messageHistory[room].push(message);
+      socket.to(room).emit("message", message);
+      socket.emit("message", message);
+    });
+});
 });
     });
 });
