@@ -22,7 +22,7 @@ The chat application allows users to sign up, log in securely, and join specific
 
 #LIVE PROJECT LINK
 
-https://chat-app-xp3z.onrender.com
+[https://chat-app-xp3z.onrender.com](https://chat-app-xp3z.onrender.com/login.html)
 
 Key features include:
 
