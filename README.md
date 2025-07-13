@@ -20,23 +20,27 @@ For my internship project with CODTECH (Task-2), I successfully developed a full
 Project Overview
 The chat application allows users to sign up, log in securely, and join specific chat rooms. Once in a room, users can exchange messages with others in real-time. All users in the same room instantly receive the messages without needing to refresh the page. This is made possible using Socket.IO, a JavaScript library that enables bidirectional, event-based communication between client and server.
 
+#LIVE PROJECT LINK
+
+https://chat-app-xp3z.onrender.com
+
 Key features include:
 
-✅ User Authentication: Signup and login system to restrict access and personalize user experience.
+->User Authentication: Signup and login system to restrict access and personalize user experience.
 
-✅ Session Handling: User sessions are preserved using express-session to manage login states.
+->Session Handling: User sessions are preserved using express-session to manage login states.
 
-✅ Chat Rooms: Users can join any chat room by name, enabling segmented communication.
+->Chat Rooms: Users can join any chat room by name, enabling segmented communication.
 
-✅ Real-Time Messaging: Messages are instantly sent and received using WebSocket events.
+-> Real-Time Messaging: Messages are instantly sent and received using WebSocket events.
 
-✅ Message History: Each room retains a local history of messages displayed upon joining.
+-> Message History: Each room retains a local history of messages displayed upon joining.
 
-✅ Dark Mode Toggle: A UI feature that enhances accessibility and improves UX.
+-> Dark Mode Toggle: A UI feature that enhances accessibility and improves UX.
 
-✅ Logout Functionality: Users can securely end sessions and return to the login screen.
+-> Logout Functionality: Users can securely end sessions and return to the login screen.
 
-✅ Deployment: Hosted on Render with a structured backend using server.js and organized public files for the frontend.
+-> Deployment: Hosted on Render with a structured backend using server.js and organized public files for the frontend.
 
 Technical Stack Used
 Backend: Node.js with Express framework
@@ -88,6 +92,3 @@ This chat app proves that simple yet powerful real-time applications can be buil
 
 <img width="1898" height="907" alt="Image" src="https://github.com/user-attachments/assets/96d472f0-c242-483a-9d6f-80e8a84553f8" />
 
-#live project link
-
-https://chat-app-xp3z.onrender.com
